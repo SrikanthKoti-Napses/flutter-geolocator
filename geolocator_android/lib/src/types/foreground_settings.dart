@@ -53,8 +53,7 @@ class ForegroundNotificationConfig {
     required this.notificationTitle,
     required this.notificationText,
     this.notificationChannelName = 'Background Location',
-    this.notificationIcon =
-        const AndroidResource(name: 'ic_launcher', defType: 'mipmap'),
+    this.notificationIcon = const AndroidResource(name: 'ic_launcher', defType: 'mipmap'),
     this.enableWifiLock = false,
     this.enableWakeLock = false,
     this.setOngoing = false,
@@ -119,7 +118,7 @@ class ForegroundNotificationConfig {
       'notificationText': notificationText,
       'notificationChannelName': notificationChannelName,
       'setOngoing': setOngoing,
-      'color': color?.toARGB32(),
+      'color': color?.value,
     };
   }
 }
